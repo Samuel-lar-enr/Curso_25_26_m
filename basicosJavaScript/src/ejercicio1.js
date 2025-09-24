@@ -20,9 +20,16 @@ function suma(a=0,b=0){
 }
 
 //------------------Inicializar aplicación-----------------------
-console.log(suma(3,8))
-console.log(suma(10,15))
-console.log(suma(7))
-console.log(suma(0))
 
-suma(5,7)
+function saludar(nombreUsuario){
+    //    let mensaje=  `Bienvenid@ ${(nombreUsuario)}`
+   // let mensaje=   nombreUsuario ?? "Usuario"
+    return  `Bienvenid@ ${(nombreUsuario ?? "Usuario")}`
+}
+
+console.log(`la suma de 5 + 0 es: ${suma(5,0)}`);
+let edad= 18;
+edad >=18? alert("eres mayor de 18"):alert("eres menor de edad");
+// en caso de que esto sea null aré ?? esto: otro
+let nombre = "Sam";
+console.log(saludar(nombre))

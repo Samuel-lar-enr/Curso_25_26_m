@@ -14,16 +14,16 @@
 
     Aparte de documentar todas las funcionas hay que hacer un test, crear la funcion test  y luego inicializarla para que compruebe todo
 */
-
+// Registro de cuentas bancarias
 const cuentas = [];
-
+// funcion para calcular un número de cuenta aleatorio
 function digitoaleatorio(length) {
 let s = '';
 for (let i = 0; i < length; i++) s += Math.floor(Math.random() * 10).toString();
 return s;
 }
-
-function  CrearCuenta(titular,saldoInicial = 0) {
+// Función para crear una cuenta y ponerla en el registro
+function  CrearCuenta(titular,saldoInicial=0) {
     const Cuenta ={
     titular: titular,
     saldo: saldoInicial,
@@ -32,13 +32,19 @@ function  CrearCuenta(titular,saldoInicial = 0) {
    cuentas.push(Cuenta);
    return Cuenta
 }
-
+// Función para buscar una cuenta a través de su id única
 function buscarCuenta(numeroCuenta){
     const Cuenta = cuentas.find(Cuenta => Cuenta.numeroCuenta === numeroCuenta);
     if (!Cuenta) throw new Error("Cuenta no encontrada");
     return Cuenta;
 }
 
+/**
+ * 
+ * @param {number} numeroCuenta 
+ * @param {number} cantidad 
+ * @returns {number}
+ */
 function retirarDinero(numeroCuenta,cantidad){
     if (cantidad <= 0) throw new Error("La cantidad debe ser positiva");
     const Cuenta = buscarCuenta(numeroCuenta);
@@ -50,6 +56,12 @@ function retirarDinero(numeroCuenta,cantidad){
     return Cuenta.saldo;
 }
 
+/**
+ * 
+ * @param {*} numeroCuenta 
+ * @param {*} cantidad 
+ * @returns 
+ */
 function depositarDinero(numeroCuenta,cantidad){
     if (cantidad <= 0) throw new Error("La cantidad debe ser positiva");
     const Cuenta = buscarCuenta(numeroCuenta);
