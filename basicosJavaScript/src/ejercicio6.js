@@ -5,7 +5,12 @@ que ponga en mayusculas todos los elementos de ese array que pase como parámetr
 
 const nombres= ["Samuel", "Daniel", "Ana", "Armando", "Pedro"];
 console.log( ` ${nombres} nombres antes de estar en mayusculas `);
-const  mayusculas = (nombres) =>   nombres.map(nombre => nombre.toUpperCase());
+/**
+ * 
+ * @param {number} nombres  -array de nombres-
+ * @returns {number} -array de nombres convertidos a mayuscula-
+ */
+const  mayusculas = (nombres = n[""]) =>   nombres.map(nombre => nombre.toUpperCase());
 console.log(`nombres despues de usar la funcion ${mayusculas(nombres)}`);
 
 
@@ -17,7 +22,12 @@ Crear una función llamada precios con iva, que al pasale un array de precios, m
 
 const precios= [10, 30, 911, 25, 67];
 console.log(precios);
-const calculadoraPrecios = (precios) =>  precios.map(dinero => dinero*1.21) 
+/**
+ * 
+ * @param {number} precios -array de precios
+ * @returns {number} -Retorna un array de precios + la suma del iva (0.21)
+ */
+const calculadoraPrecios = (precios= n[0]) =>  precios.map(dinero => dinero*1.21) 
 console.log(calculadoraPrecios(precios));
 
 
@@ -29,7 +39,14 @@ solo los impares elevados al cuadrado
 */
 const numeros= [10, 30, 911, 25, 67];
 console.log(numeros);
-const imparescuadrados = (numeros) =>   numeros.map(numero => numero % 2 === 1 ? numero * numero : numero) 
+/**
+ * 
+ * @param {number} numeros -Array de numeros
+ * @returns {number} -Retorna un array de numeros cuyos impares se han multplicado al cuardrado
+ */
+const imparescuadrados = (numeros) =>   numeros
+    .filter(numero => numero % 2 !== 0) 
+    .map(numeroinpar =>  numeroinpar *  numeroinpar) 
 
 console.log(imparescuadrados(numeros));
 
@@ -40,7 +57,13 @@ Y quero que me los devuelva sin espacios ni al principio ni al final
 */
 const emails= ["  samuel@gmail.com          ","         Daniel@gmail.com        ","        Ana@gmail.com    ","       Armando@gmail.com   ","Pedro@gmail.com"];
 console.log(emails);
-const normalizarEmail = (emails) => emails.map(email => email.trim())
+/**
+ * 
+ * @param {string} emails -Array de strings de imails con espacios por el principio y final
+ * @returns {String} -Retorna un Array de Strings con los emails sin espacios por el principio y final
+ */
+const normalizarEmail = (emails) => emails
+    .map(email => email.trim())
 console.log(normalizarEmail(emails));
 
 /*
@@ -58,6 +81,11 @@ y me devuelva la letra capital (la primera) en mayuscula, si el nombre tiene dos
 
 */
 
-const normalizarnombrespropios = (nombres) =>  {
-    nombre
+const normalizarnombrespropios = (nombres) =>  {nombres
+    .map(nombre => nombre
+        .toLowerCase()
+        .split(" ")
+        .filter(palabra => palabra !== "")
+        .map(palabraSinEspacios => palabraSinEspacios[0].toUpperCase() + palabraSinEspacios.slice(1))
+    )
 }
