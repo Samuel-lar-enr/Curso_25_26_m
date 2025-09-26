@@ -89,6 +89,7 @@ console.log("EJERCICIOS DESDE ACÁ")
 
 //Devolver un array con solo los nombres de los usuarios que tienen en su biblioteca + de 20 libros 
 
+
 console.log(usuarios.filter(usuario => usuario.data.books >= 20))
 
 //Obtener el valor promedio total de todos los libros si suponemos un precio medio de 28$  
@@ -120,5 +121,10 @@ const productos = [
 console.log(productos.filter(producto => Number(producto.stock) === 0))
 console.log(`${productos.reduce((valorInventario,producto)=> valorInventario + Number(producto.precio)*Number(producto.stock)   , 0)} DE DOLALES`)
 console.log(productos.filter(producto=> producto.categoria === "Tecnología" && Number(producto.precio) > 500))
-console.log(productos.filter(producto => producto.categoria === "Ropa").map(producto => producto.precio = producto.precio*0.9)
+console.log(productos
+  .filter(producto => producto.categoria === 'Ropa')
+  .map(producto => ({
+    ...producto,
+    precio: producto.precio * 0.9
+  }))
 )
