@@ -9,7 +9,7 @@ console.log(frutas.slice(-2))
 const  frutasV2 = ["tomate","manzana","pera","naranja"]
 console.log(frutasV2.splice(1,2,"perra","manzana"))
 
-//concat <--- Se utiliza para concatenar 2 arrays
+//concat <--- Se utiliza para concatenar 2 arrays /Muta
 
 console.log(frutas.concat(frutasV2))
 console.log(frutas.concat([1,2,3,4,5]))
@@ -122,7 +122,6 @@ console.log(productos.filter(producto => Number(producto.stock) === 0))
 console.log(`${productos.reduce((valorInventario,producto)=> valorInventario + Number(producto.precio)*Number(producto.stock)   , 0)} DE DOLALES`)
 console.log(productos.filter(producto=> producto.categoria === "Tecnología" && Number(producto.precio) > 500))
 console.log(productos
-  .filter(producto => producto.categoria === 'Ropa')
   .map(producto => ({
     ...producto,
     precio: producto.precio * 0.9
