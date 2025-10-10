@@ -1,24 +1,30 @@
-import { getUsers } from "../helpers/storage";
-import  bcryptjs  from "bcryptjs";
+import { setUsuario } from "../helpers/storage";
 
-export default function validarCredenciales(username, password) {
+export default function createUser(username, password) {
     if (!username || !password) { return false;} // vacíos
     // Siempre limpiar los datos
     const userTrim = username.trim();
     const passTrim = password.trim();
-
+    
     // Validaciones básicas
- 
+     
     if (passTrim.length < 3) {return false;} // contraseña demasiado corta
-
+    
     // Buscar el usuario en localStorage
     const usuarios = getUsers();
     const user = usuarios.find((u) => u.username === userTrim);
-    if (!user) return false;
+    if (user) return false;
     console.log("Pasó la existencia de user")
-    // Comparar contraseñas (usa el hash almacenado)
-    const ok = bcryptjs.compareSync(passTrim, user.passwordhash);
-    console.log(ok)
-    return ok;
-}
 
+    user = {
+        id: usuarios.length + 1,
+        username: userTrim,
+        passwordhash: bcryptjs.hashSync(passTrim, 10),
+        rol: "user"
+    }
+    
+    setUsuario(user)
+    
+    return true;
+
+}

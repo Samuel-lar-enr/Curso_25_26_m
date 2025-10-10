@@ -2,7 +2,7 @@ export const DB = [
     {
         id: 1,
         username: "samuel",
-        passwordhash: "$2b$10$2Ym3trQXPODAs/tP7qBDPu5v1jpYkiBDwD6dYpK545niCC6fOIm2q", //12345
+        passwordhash: "$2b$10$qzmbiG5qBbURqsr/tAWlIOvBTrWU1SoNXMkJiLFAriVgMfimzurNC", //12345
         rol: "admin"
     },
     {
