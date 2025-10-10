@@ -1,9 +1,9 @@
-import  uuid  from uuid
+import { v4 as uuidv4 } from 'uuid';
 import { serializar } from "../app";
 import { deserializar } from "../app";
 import bcryptjs from "bcryptjs";
 
-const registrarUsuarioMapa = (username, password, tipo) => {
+export const registrarUsuarioMapa = (username, password, tipo) => {
   if (!username || !password || !tipo)
     throw new Error("Faltan datos obligatorios.");
   if (typeof username !== "string")
@@ -19,7 +19,7 @@ const registrarUsuarioMapa = (username, password, tipo) => {
     throw new Error("El usuario ya existe en usuariosMapa.");
 
   const usuario = {
-    id: uuid(),
+    id: uuidv4(),
     username,
     passwordHash: bcryptjs.hashSync(password, 10),
   };
@@ -31,4 +31,6 @@ const registrarUsuarioMapa = (username, password, tipo) => {
 
   console.log(`✅ Usuario ${username} registrado en usuariosMapa.`);
 };
+
+
 
