@@ -6,8 +6,9 @@ export function renderRegisterForm() {
     <input type="password" id="password" name="password" required ></input>
     <label>Repeat Password</label>
     <input type="password" id="password2" name="password2" required ></input>
-    <button type="submit">Login</button>
+    <button type="submit">register</button>
 </form>
+<button id="btnVolver">Volver a login</button>
 <p id="message"></p>`
 }
 

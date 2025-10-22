@@ -1,4 +1,6 @@
-import { setUsuario } from "../helpers/storage";
+import { getUsers, setUsuario } from "../helpers/storage";
+import  bcryptjs  from "bcryptjs";
+
 
 export default function createUser(username, password) {
     if (!username || !password) { return false;} // vacíos
@@ -16,14 +18,14 @@ export default function createUser(username, password) {
     if (user) return false;
     console.log("Pasó la existencia de user")
 
-    user = {
+    const newUser = {
         id: usuarios.length + 1,
         username: userTrim,
         passwordhash: bcryptjs.hashSync(passTrim, 10),
         rol: "user"
     }
-    
-    setUsuario(user)
+
+    setUsuario(newUser)
     
     return true;
 
