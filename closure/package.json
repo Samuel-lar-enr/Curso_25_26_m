@@ -4,11 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "server:start": "node src/helpers/db.js",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
     "vite": "^7.2.2"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.4.1"
   }
 }

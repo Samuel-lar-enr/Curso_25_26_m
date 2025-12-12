@@ -1,0 +1,358 @@
+{
+  "bienvenida": {
+    "id": 1,
+    "texto": "Hola, bienvenido a JavaScript"
+  },
+  "tareas": [
+    {
+      "id": 1,
+      "texto": "Estudiar JavaScript",
+      "completada": false
+    },
+    {
+      "id": 2,
+      "texto": "Hacer ejercicios",
+      "completada": false
+    },
+    {
+      "id": 3,
+      "texto": "Crear un proyecto",
+      "completada": false
+    }
+  ],
+  "peliculas": [
+    {
+      "id": 1,
+      "titulo": "Inception",
+      "año": 2010,
+      "rating": 8.8
+    },
+    {
+      "id": 2,
+      "titulo": "The Dark Knight",
+      "año": 2008,
+      "rating": 9.0
+    },
+    {
+      "id": 3,
+      "titulo": "Interstellar",
+      "año": 2014,
+      "rating": 8.6
+    }
+  ],
+  "alojamientos": [
+    {
+      "id": 1,
+      "nombre": "Apartamento Centro",
+      "ubicacion": "Barcelona",
+      "precio": 85,
+      "rating": 4.7
+    },
+    {
+      "id": 2,
+      "nombre": "Hotel 4 Estrellas",
+      "ubicacion": "Barcelona",
+      "precio": 120,
+      "rating": 4.9
+    },
+    {
+      "id": 3,
+      "nombre": "Cabaña Playa",
+      "ubicacion": "Valencia",
+      "precio": 65,
+      "rating": 4.8
+    }
+  ],
+  "ubicaciones": [
+    {
+      "id": 1,
+      "nombre": "Barcelona",
+      "pais": "España"
+    },
+    {
+      "id": 2,
+      "nombre": "Valencia",
+      "pais": "España"
+    },
+    {
+      "id": 3,
+      "nombre": "Madrid",
+      "pais": "España"
+    }
+  ],
+  "usuariosConHabilidades": [
+  {
+    "id": 1,
+    "nombre": "Ana García",
+    "edad": 28,
+    "email": "ana@example.com",
+    "habilidades": ["JavaScript", "React", "CSS"],
+    "nivel": "Senior"
+  },
+  {
+    "id": 2,
+    "nombre": "Luis Martínez",
+    "edad": 34,
+    "email": "luis@example.com",
+    "habilidades": ["HTML", "CSS", "JavaScript"],
+    "nivel": "Junior"
+  },
+  {
+    "id": 3,
+    "nombre": "María López",
+    "edad": 22,
+    "email": "maria@example.com",
+    "habilidades": ["Python", "Django", "SQL"],
+    "nivel": "Junior"
+  }
+],
+"publicaciones": [
+    {
+      "id": 1,
+      "titulo": "Introducción a JavaScript",
+      "autor": "Ana García",
+      "fecha": "2024-01-15",
+      "contenido": "JavaScript es un lenguaje de programación versátil que se ejecuta en el navegador...",
+      "etiquetas": ["JavaScript", "Programación", "Web"],
+      "likes": 42
+    },
+    {
+      "id": 2,
+      "titulo": "CSS Grid vs Flexbox",
+      "autor": "Luis Martínez",
+      "fecha": "2024-01-20",
+      "contenido": "Tanto CSS Grid como Flexbox son herramientas poderosas para crear layouts...",
+      "etiquetas": ["CSS", "Diseño", "Frontend"],
+      "likes": 38
+    }
+  ],
+  "menuRestaurante": {
+    "categorias": [
+      {
+        "id": 1,
+        "nombre": "Entrantes",
+        "platos": [
+          {
+            "id": 101,
+            "nombre": "Ensalada César",
+            "precio": 8.5,
+            "descripcion": "Lechuga romana, parmesano, crutones"
+          },
+          {
+            "id": 102,
+            "nombre": "Bruschetta",
+            "precio": 6.75,
+            "descripcion": "Pan tostado con tomate y albahaca"
+          },
+          {
+            "id": 103,
+            "nombre": "Gazpacho",
+            "precio": 5.5,
+            "descripcion": "Sopa fría de tomate y pimiento"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "nombre": "Platos Principales",
+        "platos": [
+          {
+            "id": 201,
+            "nombre": "Paella Valenciana",
+            "precio": 18.9,
+            "descripcion": "Arroz con marisco y pollo"
+          },
+          {
+            "id": 202,
+            "nombre": "Carrilleras al Vino",
+            "precio": 16.5,
+            "descripcion": "Carrilleras de cerdo cocinadas lentamente"
+          },
+          {
+            "id": 203,
+            "nombre": "Merluza a la Vasca",
+            "precio": 19.75,
+            "descripcion": "Merluza con salsa de almejas"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "nombre": "Postres",
+        "platos": [
+          {
+            "id": 301,
+            "nombre": "Tiramisú",
+            "precio": 5.25,
+            "descripcion": "Postre italiano con café y mascarpone"
+          },
+          {
+            "id": 302,
+            "nombre": "Flan de Huevo",
+            "precio": 3.75,
+            "descripcion": "Postre tradicional español"
+          },
+          {
+            "id": 303,
+            "nombre": "Brownie con Helado",
+            "precio": 6.5,
+            "descripcion": "Brownie de chocolate con helado de vainilla"
+          }
+        ]
+      }
+    ]
+  },
+  "eventos": [
+    {
+      "id": 1,
+      "nombre": "Frontend Conference 2024",
+      "fecha": "2024-03-15",
+      "hora": "09:00",
+      "lugar": "Centro de Convenciones, Madrid",
+      "ponentes": ["Ana García", "Carlos Rodríguez"],
+      "asistentes": 250,
+      "precio": 75
+    },
+    {
+      "id": 2,
+      "nombre": "JavaScript Summit",
+      "fecha": "2024-04-20",
+      "hora": "10:00",
+      "lugar": "Palacio de Exposiciones, Barcelona",
+      "ponentes": ["Luis Martínez", "María López", "Ana García"],
+      "asistentes": 180,
+      "precio": 60
+    }
+  ],
+  "proyectos": [
+    {
+      "id": 1,
+      "titulo": "E-commerce Moderno",
+      "descripcion": "Tienda online con carrito de compras y pasarela de pago",
+      "tecnologias": ["React", "Node.js", "MongoDB"],
+      "imagen": "https://via.placeholder.com/300x200/4f46e5/ffffff?text=E-commerce",
+      "url": "https://ejemplo-ecommerce.com",
+      "destacado": true,
+      "fechaFinalizacion": "2024-01-20"
+    },
+    {
+      "id": 2,
+      "titulo": "App del Clima",
+      "descripcion": "Aplicación web para consultar el pronóstico del tiempo",
+      "tecnologias": ["Vue.js", "API REST", "Chart.js"],
+      "imagen": "https://via.placeholder.com/300x200/059669/ffffff?text=Clima",
+      "url": "https://ejemplo-clima.com",
+      "destacado": false,
+      "fechaFinalizacion": "2023-12-15"
+    },
+    {
+      "id": 3,
+      "titulo": "Gestor de Tareas",
+      "descripcion": "Aplicación para organizar y trackear tareas diarias",
+      "tecnologias": ["JavaScript", "LocalStorage", "CSS Grid"],
+      "imagen": "https://via.placeholder.com/300x200/dc2626/ffffff?text=Tareas",
+      "url": "https://ejemplo-tareas.com",
+      "destacado": true,
+      "fechaFinalizacion": "2024-02-10"
+    }
+  ],
+  "hoteles": [
+    {
+      "id": 1,
+      "nombre": "Hotel Sol & Mar",
+      "horario": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+      "ciudad": "Barcelona",
+      "calle": "Avinguda Diagonal 245",
+      "precio_por_dia": 120,
+      "valoracion": 4.5
+    },
+    {
+      "id": 2,
+      "nombre": "Gran Hotel Central",
+      "horario": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"],
+      "ciudad": "Madrid",
+      "calle": "Calle Mayor 58",
+      "precio_por_dia": 150,
+      "valoracion": 4.7
+    },
+    {
+      "id": 3,
+      "nombre": "Hotel Costa Azul",
+      "horario": ["Viernes", "Sábado", "Domingo"],
+      "ciudad": "Valencia",
+      "calle": "Paseo Marítimo 102",
+      "precio_por_dia": 95,
+      "valoracion": 4.2
+    },
+    {
+      "id": 4,
+      "nombre": "Hotel Sierra Nevada",
+      "horario": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
+      "ciudad": "Granada",
+      "calle": "Calle Real de la Alhambra 11",
+      "precio_por_dia": 180,
+      "valoracion": 4.8
+    },
+    {
+      "id": 5,
+      "nombre": "Hotel Atlántico",
+      "horario": ["Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+      "ciudad": "Sevilla",
+      "calle": "Avenida de la Constitución 89",
+      "precio_por_dia": 110,
+      "valoracion": 4.3
+    },
+    {
+      "id": 6,
+      "nombre": "Hotel Bahía Serena",
+      "horario": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"],
+      "ciudad": "Málaga",
+      "calle": "Calle Larios 12",
+      "precio_por_dia": 105,
+      "valoracion": 4.1
+    },
+    {
+      "id": 7,
+      "nombre": "Hotel Montaña Verde",
+      "horario": ["Sábado", "Domingo"],
+      "ciudad": "Bilbao",
+      "calle": "Calle Gran Vía 70",
+      "precio_por_dia": 130,
+      "valoracion": 4.6
+    },
+    {
+      "id": 8,
+      "nombre": "Hotel Costa Dorada",
+      "horario": ["Lunes", "Miércoles", "Viernes", "Domingo"],
+      "ciudad": "Tarragona",
+      "calle": "Rambla Nova 59",
+      "precio_por_dia": 90,
+      "valoracion": 3.9
+    },
+    {
+      "id": 9,
+      "nombre": "Hotel Lago Encantado",
+      "horario": ["Lunes", "Martes", "Jueves", "Sábado"],
+      "ciudad": "Santander",
+      "calle": "Paseo Pereda 21",
+      "precio_por_dia": 140,
+      "valoracion": 4.4
+    },
+    {
+      "id": 10,
+      "nombre": "Hotel Puerta del Sol",
+      "horario": ["Martes", "Jueves", "Viernes", "Sábado", "Domingo"],
+      "ciudad": "Zaragoza",
+      "calle": "Calle Alfonso I 33",
+      "precio_por_dia": 115,
+      "valoracion": 4.0
+    }
+  ]
+}
+
+
+
+
+
+
+
